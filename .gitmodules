@@ -1,0 +1,3 @@
+[submodule "peqphpeditor"]
+	path = peqphpeditor
+	url = https://github.com/ProjectEQ/peqphpeditor
