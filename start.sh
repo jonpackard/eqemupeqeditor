@@ -8,7 +8,7 @@
 # Returns:
 #   env. variable name
 #########################
-mkdir -p /var/www/html/logs && chmod 777 /var/www/html/logs && chmod 666 /var/www/html/logs/*
+mkdir -p /var/www/html/logs && chmod 777 /var/www/html/logs && [ -e /var/www/html/logs/* ] && chmod 666 /var/www/html/logs/*
 get_env_var() {
     local id="${1:?id is required}"
     echo "${DB_FLAVOR^^}_${id}"
