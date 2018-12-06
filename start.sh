@@ -8,6 +8,7 @@
 # Returns:
 #   env. variable name
 #########################
+mkdir -p /var/www/html/logs && chmod 777 /var/www/html/logs && chmod 666 /var/www/html/logs/*
 get_env_var() {
     local id="${1:?id is required}"
     echo "${DB_FLAVOR^^}_${id}"
@@ -80,7 +81,7 @@ create_config() {
 \$logs_dir = "logs";
 
 // Log SQL queries:  1 = on, 0 = off
-\$logging = 0;
+\$logging = 1;
 
 // Automatically create new logs monthly.
 \$filetime = date("m-Y");
